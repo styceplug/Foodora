@@ -4,9 +4,11 @@ import 'package:foodora/widgets/custom_button.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../utils/colors.dart';
-import '../../utils/dimensions.dart';
-import '../../widgets/custom_appbar.dart';
+import '../../../utils/colors.dart';
+import '../../../utils/dimensions.dart';
+import '../../../widgets/custom_appbar.dart';
+
+
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});

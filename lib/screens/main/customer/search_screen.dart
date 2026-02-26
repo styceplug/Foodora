@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../utils/colors.dart';
-import '../../utils/dimensions.dart';
-import '../../widgets/custom_appbar.dart';
-import '../../widgets/custom_textfield.dart';
+import '../../../utils/colors.dart';
+import '../../../utils/dimensions.dart';
+import '../../../widgets/custom_appbar.dart';
+import '../../../widgets/custom_textfield.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

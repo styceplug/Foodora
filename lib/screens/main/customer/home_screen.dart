@@ -5,9 +5,9 @@ import 'package:foodora/utils/dimensions.dart';
 import 'package:foodora/widgets/custom_appbar.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import '../../routes/routes.dart';
-import '../../utils/app_constants.dart';
-import '../../widgets/side_drawer.dart';
+import '../../../routes/routes.dart';
+import '../../../utils/app_constants.dart';
+import '../../../widgets/side_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

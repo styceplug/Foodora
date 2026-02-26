@@ -6,8 +6,8 @@ import 'package:foodora/widgets/custom_textfield.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../utils/dimensions.dart';
-import '../../widgets/custom_appbar.dart';
+import '../../../utils/dimensions.dart';
+import '../../../widgets/custom_appbar.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
