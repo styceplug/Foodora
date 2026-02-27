@@ -7,7 +7,6 @@ import '../utils/dimensions.dart';
 
 class BottomBarItem extends StatefulWidget {
   final String image;
-  final String name;
   final bool isActive;
   final Function() onClick;
   final Function()? onHold;
@@ -15,7 +14,6 @@ class BottomBarItem extends StatefulWidget {
   const BottomBarItem({
     super.key,
     required this.image,
-    required this.name,
     required this.isActive,
     required this.onClick,
     this.onHold,
@@ -29,7 +27,7 @@ class _BottomBarItemState extends State<BottomBarItem> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: Dimensions.width70 + Dimensions.width10,
+      width: Dimensions.width50,
       child: InkWell(
         onTap: () {
           HapticFeedback.selectionClick();
@@ -43,28 +41,12 @@ class _BottomBarItemState extends State<BottomBarItem> {
             // icon
             Image.asset(
               AppConstants.getPngAsset(widget.image),
-              width: Dimensions.iconSize20*0.9,
-              height: Dimensions.iconSize20*0.9,
+              width: Dimensions.iconSize20*1.7,
+              height: Dimensions.iconSize20*1.7,
               color:
                   widget.isActive
                       ? AppColors.primaryColor
                       : AppColors.grey4.withOpacity(0.5),
-            ),
-            // space
-            SizedBox(height: Dimensions.height5),
-            // name
-            Text(
-              widget.name,
-              maxLines: 1,
-              style: TextStyle(
-                color:
-                    widget.isActive
-                        ? AppColors.primaryColor
-                        : AppColors.grey4.withOpacity(0.5),
-                fontWeight: FontWeight.w400,
-                fontSize: Dimensions.font13,
-                fontFamily: 'Poppins',
-              ),
             ),
           ],
         ),

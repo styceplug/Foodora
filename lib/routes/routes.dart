@@ -18,6 +18,7 @@ import 'package:foodora/screens/splash_screens/splash_screen.dart';
 import 'package:get/get.dart';
 
 import '../screens/main/customer/payment_screen.dart';
+import '../screens/main/vendor/home_page.dart';
 import '../screens/splash_screens/no_internet_screen.dart';
 import '../screens/splash_screens/onboarding_screen.dart';
 import '../screens/splash_screens/update_app_screen.dart';
@@ -57,9 +58,19 @@ class AppRoutes {
 
 
   //vendor
+  static const String homePage = '/home-page';
+
 
 
   static final routes = [
+
+    //vendor
+    GetPage(
+      name: homePage,
+      page: () => const HomePage(),
+      transition: Transition.fadeIn,
+    ),
+
 
     //in-app
     GetPage(

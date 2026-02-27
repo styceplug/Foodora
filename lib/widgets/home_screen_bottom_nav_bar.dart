@@ -18,20 +18,20 @@ class HomeScreenBottomNavBar extends StatelessWidget {
 
     return Obx(
       () => SizedBox(
-        height: Dimensions.height10 * 8.7,
+        height: Dimensions.height10 * 10,
         child: Stack(
           alignment: Alignment.bottomCenter,
           clipBehavior: Clip.none,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(Dimensions.radius30),
-                topRight: Radius.circular(Dimensions.radius30),
+                topLeft: Radius.circular(Dimensions.radius10),
+                topRight: Radius.circular(Dimensions.radius10),
               ),
               child: Container(
                 color: Colors.white,
                 padding: EdgeInsets.only(
-                  bottom: Dimensions.height30,
+                  bottom: Dimensions.height50,
                   left: Dimensions.width20,
                   right: Dimensions.width20,
                   top: Dimensions.height15,
@@ -40,36 +40,31 @@ class HomeScreenBottomNavBar extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    /*BottomBarItem(
-                      name: 'Home',
-                      image: 'home-icon',
+                    BottomBarItem(
+                      image: 'dashboard',
                       isActive: appController.currentAppPage.value == 0,
                       onClick: () => appController.changeCurrentAppPage(0),
                     ),
                     BottomBarItem(
-                      name: 'Declutter',
-                      image: 'browse-icon',
+                      image: 'inventory',
                       isActive: appController.currentAppPage.value == 1,
                       onClick: () => appController.changeCurrentAppPage(1),
                     ),
                     BottomBarItem(
-                      name: 'Declutter',
-                      image: 'browse-icon',
-                      isActive: appController.currentAppPage.value == 1,
-                      onClick: () => appController.changeCurrentAppPage(1),
+                      image: 'add',
+                      isActive: appController.currentAppPage.value == 2,
+                      onClick: () => appController.changeCurrentAppPage(2),
                     ),
                     BottomBarItem(
-                      name: 'My jobs',
-                      image: 'jobs-icon',
+                      image: 'bell',
                       isActive: appController.currentAppPage.value == 3,
                       onClick: () => appController.changeCurrentAppPage(3),
                     ),
                     BottomBarItem(
-                      name: 'Profile',
-                      image: 'profile-icon',
+                      image: 'profile',
                       isActive: appController.currentAppPage.value == 4,
                       onClick: () => appController.changeCurrentAppPage(4),
-                    ),*/
+                    ),
                   ],
                 ),
               ),
@@ -82,65 +77,3 @@ class HomeScreenBottomNavBar extends StatelessWidget {
   }
 }
 
-class VendorBottomNavBar extends StatelessWidget {
-  const VendorBottomNavBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    AppController appController = Get.find<AppController>();
-
-    return Obx(
-      () => SizedBox(
-        height: Dimensions.height10 * 9,
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(Dimensions.radius30),
-            topRight: Radius.circular(Dimensions.radius30),
-          ),
-          child: Container(
-            color: Colors.white,
-            padding: EdgeInsets.only(
-              bottom: Dimensions.height30,
-              left: Dimensions.width20,
-              right: Dimensions.width20,
-              top: Dimensions.height15,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                BottomBarItem(
-                  name: 'Home',
-                  image: 'home-icon',
-                  isActive: appController.currentAppPage.value == 0,
-                  onClick: () => appController.changeCurrentAppPage(0),
-                ),
-                BottomBarItem(
-                  name: 'Market',
-                  image: 'browse-icon',
-                  isActive: appController.currentAppPage.value == 1,
-                  onClick: () => appController.changeCurrentAppPage(1),
-                ),
-
-                SizedBox(width: Dimensions.width10 * 5),
-
-                BottomBarItem(
-                  name: 'My jobs',
-                  image: 'jobs-icon',
-                  isActive: appController.currentAppPage.value == 3,
-                  onClick: () => appController.changeCurrentAppPage(3),
-                ),
-                BottomBarItem(
-                  name: 'Profile',
-                  image: 'profile-icon',
-                  isActive: appController.currentAppPage.value == 4,
-                  onClick: () => appController.changeCurrentAppPage(4),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}

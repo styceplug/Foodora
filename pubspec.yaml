@@ -33,7 +33,7 @@ dependencies:
   flutter_local_notifications: ^19.4.1
   file_picker: ^10.2.0
   timeago: ^3.7.1
-  fluttertoast: ^8.2.12
+  fluttertoast: ^9.0.0
   flutter_html: ^3.0.0-beta.2
   webview_flutter: ^4.7.0
   permission_handler: ^12.0.1

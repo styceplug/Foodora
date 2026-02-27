@@ -1,5 +1,9 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:foodora/screens/main/vendor/pages/dashboard_screen.dart';
+import 'package:foodora/screens/main/vendor/pages/inventory_screen.dart';
+import 'package:foodora/screens/main/vendor/pages/notification_screen.dart';
+import 'package:foodora/screens/main/vendor/pages/upload_screen.dart';
 
 
 import 'package:get/get.dart';
@@ -9,6 +13,7 @@ import '../data/api/api_checker.dart';
 import '../data/api/api_client.dart';
 import '../data/repo/app_repo.dart';
 import '../routes/routes.dart';
+import '../screens/main/vendor/pages/profile_screen.dart';
 import '../utils/app_constants.dart';
 
 class AppController extends GetxController {
@@ -28,10 +33,11 @@ class AppController extends GetxController {
 
 
   final List<Widget> pages = [
-
-  ];
-  final List<Widget> vendorPages = [
-
+    DashboardScreen(),
+    InventoryScreen(),
+    UploadScreen(),
+    NotificationScreen(),
+    ProfileScreen(),
   ];
 
   @override

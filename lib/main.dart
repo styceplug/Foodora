@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
         title: 'Fodora',
 
         getPages: AppRoutes.routes,
-        initialRoute: AppRoutes.splashScreen,
+        initialRoute: AppRoutes.homePage,
         builder: (context, child) {
           final loaderController =
           Get.find<GlobalLoaderController>();

@@ -46,11 +46,14 @@ class CustomTextField extends StatelessWidget {
 
     // Use theme-based colors
     final Color effectiveTextColor = textColor ?? Colors.black;
-    final Color fillColor = this.fillColor ??
-        (isDark ? Colors.white10 : AppColors.grey2.withOpacity(0.5));
+    final Color fillColor =
+        this.fillColor ??
+        (isDark ? Colors.white : AppColors.white.withOpacity(0.5));
     final Color borderColor = theme.dividerColor.withOpacity(0.2);
     final Color focusColor = theme.colorScheme.primary.withOpacity(0.6);
-    final Color enabledBorderColor = theme.colorScheme.secondary.withOpacity(0.2);
+    final Color enabledBorderColor = theme.colorScheme.secondary.withOpacity(
+      0.2,
+    );
 
     return TextFormField(
       onChanged: onChanged,
@@ -60,22 +63,25 @@ class CustomTextField extends StatelessWidget {
       maxLines: maxLines,
       autofillHints: autofillHints,
       keyboardType: keyboardType,
-      style: TextStyle(color: effectiveTextColor,fontFamily: 'Poppins'),
+      style: TextStyle(color: effectiveTextColor, fontFamily: 'Poppins'),
       validator: validator,
       decoration: InputDecoration(
         filled: true,
         fillColor: fillColor,
         labelText: labelText,
-        labelStyle: hintStyle ??
+        labelStyle:
+            hintStyle ??
             TextStyle(
               color: effectiveTextColor.withOpacity(0.5),
               fontFamily: 'Poppins',
             ),
-        hintStyle: hintStyle ??
+        hintStyle:
+            hintStyle ??
             TextStyle(
               color: Colors.black87.withOpacity(0.5),
               fontFamily: 'Poppins',
-            ),        hintText: hintText,
+            ),
+        hintText: hintText,
         prefixIcon: prefixIcon,
         prefixIconConstraints: const BoxConstraints(minWidth: 0, minHeight: 0),
         suffixIcon: suffixIcon,
