@@ -115,46 +115,51 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        actionIcon: Stack(
-          children: [
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: Dimensions.width10,
-                vertical: Dimensions.height10,
-              ),
-              decoration: BoxDecoration(
-                color: Color(0xFF181C2E),
-                shape: BoxShape.circle,
-              ),
-              child: Icon(
-                Iconsax.shopping_bag,
-                color: AppColors.white,
-                size: Dimensions.iconSize20,
-              ),
-            ),
-            Positioned(
-              right: 0,
-              top: -2,
-              child: Container(
+        actionIcon: InkWell(
+          onTap: (){
+            Get.toNamed(AppRoutes.cartScreen);
+          },
+          child: Stack(
+            children: [
+              Container(
                 padding: EdgeInsets.symmetric(
-                  horizontal: Dimensions.width5,
-                  vertical: Dimensions.height5,
+                  horizontal: Dimensions.width10,
+                  vertical: Dimensions.height10,
                 ),
                 decoration: BoxDecoration(
-                  color: AppColors.primaryColor,
+                  color: Color(0xFF181C2E),
                   shape: BoxShape.circle,
                 ),
-                child: Text(
-                  '3',
-                  style: TextStyle(
-                    color: AppColors.white,
-                    fontSize: Dimensions.font12,
-                    fontWeight: FontWeight.w600,
+                child: Icon(
+                  Iconsax.shopping_bag,
+                  color: AppColors.white,
+                  size: Dimensions.iconSize20,
+                ),
+              ),
+              Positioned(
+                right: 0,
+                top: -2,
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: Dimensions.width5,
+                    vertical: Dimensions.height5,
+                  ),
+                  decoration: BoxDecoration(
+                    color: AppColors.primaryColor,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Text(
+                    '3',
+                    style: TextStyle(
+                      color: AppColors.white,
+                      fontSize: Dimensions.font12,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       body: SafeArea(
