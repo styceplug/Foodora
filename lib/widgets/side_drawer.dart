@@ -50,7 +50,7 @@ class HomeDrawer extends StatelessWidget {
                 title: "Addresses",
                 onTap: () {
                   Navigator.pop(context);
-                  // Get.toNamed(AppRoutes.addresses);
+                  Get.toNamed(AppRoutes.addressScreen);
                 },
               ),
 
@@ -70,7 +70,7 @@ class HomeDrawer extends StatelessWidget {
                 title: "Orders",
                 onTap: () {
                   Navigator.pop(context);
-                  // Get.toNamed(AppRoutes.orders);
+                  Get.toNamed(AppRoutes.ordersScreen);
                 },
               ),
               _drawerItem(
@@ -79,7 +79,7 @@ class HomeDrawer extends StatelessWidget {
                 title: "Settings",
                 onTap: () {
                   Navigator.pop(context);
-                  // Get.toNamed(AppRoutes.settings);
+                  Get.toNamed(AppRoutes.settingsScreen);
                 },
               ),
 

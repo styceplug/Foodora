@@ -9,11 +9,14 @@ import 'package:foodora/screens/auth/verify_otp.dart';
 import 'package:foodora/screens/in_app/location_access.dart';
 import 'package:foodora/screens/in_app/profile_screen.dart';
 import 'package:foodora/screens/in_app/restuarant_details.dart';
+import 'package:foodora/screens/main/customer/addresses_screen.dart';
 import 'package:foodora/screens/main/customer/cart_screen.dart';
 import 'package:foodora/screens/main/customer/home_screen.dart';
 import 'package:foodora/screens/main/customer/meal_screen.dart';
+import 'package:foodora/screens/main/customer/order_screen.dart';
 import 'package:foodora/screens/main/customer/restaurant_screen.dart';
 import 'package:foodora/screens/main/customer/search_screen.dart';
+import 'package:foodora/screens/main/customer/settings_screen.dart';
 import 'package:foodora/screens/splash_screens/splash_screen.dart';
 import 'package:get/get.dart';
 
@@ -51,6 +54,9 @@ class AppRoutes {
   static const String restaurantDetailsScreen = '/restaurant-details-screen';
   static const String paymentScreen = '/payment-screen';
   static const String profileScreen = '/profile-screen';
+  static const String addressScreen = '/address-screen';
+  static const String ordersScreen = '/orders-screen';
+  static const String settingsScreen = '/settings-screen';
 
 
 
@@ -111,6 +117,21 @@ class AppRoutes {
     GetPage(
       name: profileScreen,
       page: () => const ProfileScreen(),
+      transition: Transition.fadeIn,
+    ),
+    GetPage(
+      name: addressScreen,
+      page: () => const AddressesScreen(),
+      transition: Transition.fadeIn,
+    ),
+    GetPage(
+      name: ordersScreen,
+      page: () => const OrderScreen(),
+      transition: Transition.fadeIn,
+    ),
+    GetPage(
+      name: settingsScreen,
+      page: () => const SettingsScreen(),
       transition: Transition.fadeIn,
     ),
 
